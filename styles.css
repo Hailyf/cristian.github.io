@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(133, 133, 253);
+        color: #333;
+        text-align: center;
+        padding: 50px;
+        position: relative; /* Necesario para posicionar imágenes absolutas */
+    }
+    
+    .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        margin: 0 auto;
+        position: relative; /* Necesario para posicionar imágenes absolutas */
+    }
+    
+    .app-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .app-item {
+        background-color: #eee;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        position: relative;
+    }
+    
+    .app-image {
+        width: 100px; /* Ajusta el tamaño según sea necesario */
+        height: auto;
+        display: block;
+        margin: 10px auto;
+    }
+    
+    button {
+        padding: 10px 20px;
+        background-color: #5cb85c; /* Color verde */
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #4cae4c; /* Verde más oscuro al pasar el mouse */
+    }
+    
+    .form-container {
+        position: relative;
+        z-index: 1; /* Asegura que el formulario esté en el primer plano */
+        margin-top: 30px;
+    }
+    
+    input[type="text"], input[type="email"], input[type="submit"] {
+        padding: 10px;
+        margin: 5px 0;
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    input[type="submit"] {
+        background-color: #0275d8;
+        color: #fff;
+        cursor: pointer;
+    }
+    
+    input[type="submit"]:hover {
+        background-color: #025aa5;
+    }
+    
+    #confirmation-message {
+        margin-top: 20px;
+    }
+    
+    /* Estilos para las imágenes alrededor del formulario */
+    .container::before {
+        content: "";
+        position: absolute;
+        top: -50px;
+        left: -50px;
+        width: 100px;
+        height: 100px;
+        background: url('images/netflix.png') no-repeat center center;
+        background-size: cover;
+    }
+    
+    .container::after {
+        content: "";
+        position: absolute;
+        bottom: -50px;
+        right: -50px;
+        width: 100px;
+        height: 100px;
+        background: url('images/disneyplus.png') no-repeat center center;
+        background-size: cover;
+    }
+    
+    /* Puedes agregar más imágenes alrededor usando pseudoelementos */
+    

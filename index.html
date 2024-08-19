@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promoción de Apps de Streaming</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        emailjs.init('zVL1E1HDUgsTYEj1N'); // Reemplaza con tu ID de usuario de EmailJS
+    </script>
+</head>
+<body>
+    <h1>Streaming Cristian</h1>
+    <div class="container">
+        <h1>Elige tu App de Streaming Favorita</h1>
+        
+        <div class="app-list">
+            <div class="app-item">
+                <h2>Netflix</h2>
+                <img src="netflix.png" alt="Netflix" class="app-image">
+                <p>Precio: $15/mes</p>
+                <button type="button" onclick="selectApp('Netflix', 15)">Seleccionar</button>
+            </div>
+            <div class="app-item">
+                <h2>Disney+</h2>
+                <img src="disneyplus.png" alt="Disney+" class="app-image">
+                <p>Precio: $8/mes</p>
+                <button type="button" onclick="selectApp('Disney+', 8)">Seleccionar</button>
+            </div>
+            <div class="app-item">
+                <h2>Amazon Prime Video</h2>
+                <img src="amazonprime.png" alt="Amazon Prime Video" class="app-image">
+                <p>Precio: $10/mes</p>
+                <button type="button" onclick="selectApp('Amazon Prime Video', 10)">Seleccionar</button>
+            </div>
+            <div class="app-item">
+                <h2>Mivistar TV</h2>
+                <img src="mivistar.png" alt="Mivistar TV" class="app-image">
+                <p>Precio: $20/mes</p>
+                <button type="button" onclick="selectApp('Mivistar TV', 20)">Seleccionar</button>
+            </div>
+            <div class="app-item">
+                <h2>Max</h2>
+                <img src="max.png" alt="Max" class="app-image">
+                <p>Precio: $14/mes</p>
+                <button type="button" onclick="selectApp('Max', 14)">Seleccionar</button>
+            </div>
+            <div class="app-item">
+                <h2>Zapping TV</h2>
+                <img src="zapping.png" alt="Zapping TV" class="app-image">
+                <p>Precio: $18/mes</p>
+                <button type="button" onclick="selectApp('Zapping TV', 18)">Seleccionar</button>
+            </div>
+            <div class="app-item">
+                <h2>DirecTV Go</h2>
+                <img src="directv.png" alt="DirecTV Go" class="app-image">
+                <p>Precio: $22/mes</p>
+                <button type="button" onclick="selectApp('DirecTV Go', 22)">Seleccionar</button>
+            </div>
+            <div class="app-item">
+                <h2>Crunchyroll</h2>
+                <img src="crunchyroll.png" alt="Crunchyroll" class="app-image">
+                <p>Precio: $7/mes</p>
+                <button type="button" onclick="selectApp('Crunchyroll', 7)">Seleccionar</button>
+            </div>
+        </div>
+
+        <div id="selected-app">
+            <h2>App seleccionada:</h2>
+            <p id="app-name">Ninguna</p>
+            <p id="app-price"></p>
+        </div>
+
+        <!-- Aquí va el formulario -->
+        <div class="form-container">
+            <form id="form">
+                <div class="field">
+                    <label for="from_name">Nombre</label>
+                    <input type="text" name="from_name" id="from_name" required>
+                </div>
+                <div class="field">
+                    <label for="email_id">Correo Electrónico</label>
+                    <input type="email" name="email_id" id="email_id" required>
+                </div>
+                <div class="field">
+                    <label for="app">App Seleccionada</label>
+                    <input type="text" name="app" id="app" readonly>
+                </div>
+                <div class="field">
+                    <label for="number">Teléfono</label>
+                    <input type="text" name="number" id="number" required>
+                </div>
+                <div class="field">
+                    <label for="message">Mensaje</label>
+                    <input type="text" name="message" id="message">
+                </div>
+                <input type="submit" id="button" value="Enviar Solicitud">
+            </form>
+        </div>
+
+        <!-- Mensaje de confirmación -->
+        <div id="confirmation-message" style="display: none;">
+            <h2>Registro Exitoso</h2>
+            <p id="confirmation-text"></p>
+            <a href="index.html">Volver a la página principal</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
